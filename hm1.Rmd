@@ -26,12 +26,8 @@ mean(pvs <= .05)
 ##(2) If we wanted to see the power to detect a statistically significant correlation coefficient[n=50], how would we do that with a simulation [assume r = .30].
 
 ```{r}
-cor(d1)
-```
-
-
-```{r}
 pvs <- numeric(1000)
+corv <- numeric(1000)
 library(gendata)
 set.seed(2512)
 for (i in 1:1000){
